@@ -1,0 +1,29 @@
+// Código de Nav acá
+nav {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    .flex(column); // llamamos el mixin y le pasamos el parametro de direction, los otros por defecto son center
+
+    background-color: @nav-bg;
+    border: @nav-border solid 2px;
+    padding-top: 10px;
+
+    ul {
+        // display: flex;
+        // justify-content: space-around;
+        .flex(@justify: space-around); // utilizamos el mixin para este tambien.
+        width: 50%;
+        padding: 10px;
+
+        @media @phone {
+            width: 90%;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: @nav-font;
+        font-weight: bold;
+    }
+}

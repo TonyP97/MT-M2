@@ -1,0 +1,25 @@
+// Mixins acá
+.flex(@direction: row, @justify: center, @align: center){ // recibe parametros con los estilos que va a aplicar, y recibe un valor por defecto en caso de que no se le pase parametro.
+    display: flex;
+    flex-direction: @direction; // va a ser el parametro que se le pase por direction
+    justify-content: @justify; // va a ser el parametro que se le apse en justify
+    align-items: @align;
+}
+
+.imgBorder(@radius: 20px){
+    border-radius: @radius
+}
+
+.myBtn(@bg-color, @font-color){
+    background-color: @bg-color;
+    color: @font-color;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 15px;
+
+    &:hover {
+        background-color: @font-color;
+        color: @bg-color;
+    }
+}
